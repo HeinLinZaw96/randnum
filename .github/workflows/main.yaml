@@ -10,8 +10,6 @@ on:
 
     - v1.*
 
-     
-
 jobs:
 
   docker:
@@ -68,16 +66,16 @@ jobs:
 
       -
 
-        # name: Post message on slack
+        name: Post message on slack
 
-        # uses: bluenovaio/action-slack@main
+        uses: bluenovaio/action-slack@main
 
-        # with:
+        with:
 
-        #   username: "Hein Lin Zaw"
+          username: "Hein Lin Zaw"
 
-        #   icon_emoji: ":robot_face:"
+          icon_emoji: ":robot_face:"
 
-        #   text:  "Name: Hein Lin Zaw \nMatriculation: A0249492R \nEmail: <outlook.com|E0941685@U.NUS.EDU> \nRepo: <https://github.com/HeinLinZaw96/randnum.git|git://https://github.com/HeinLinZaw96/randnum.git>\nImage name: nyan345/randnumimg:${{github.ref_name}}\nImage url: <https://hub.docker.com/repository/docker/nyan345/randnumimgt|https://hub.docker.com/repository/docker/nyan345/randnumimg>"
+          text:  "Name: Hein Lin Zaw \nMatriculation: A0249492R \nEmail: <outlook.com|E0941685@U.NUS.EDU> \nRepo: <https://github.com/HeinLinZaw96/randnum.git|git://https://github.com/HeinLinZaw96/randnum.git>\nImage name: heinlinzaw/randnumimg:${{github.ref_name}}\nImage url: <https://hub.docker.com/repository/docker/heinlinzaw/randnumimg|https://hub.docker.com/repository/docker/heinlinzaw/randnumimg>"
 
-        #   webhook_url: ${{ secrets.SLACK_WEBHOOK }}
+          webhook_url: ${{ secrets.SLACK_WEBHOOK }}
