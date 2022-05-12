@@ -1,14 +1,8 @@
-name: ci
+name: randnum
 
 on:
-
   release:
-
     types: [published]
-
-    tag:
-
-    - v1.*
 
 jobs:
 
@@ -60,7 +54,7 @@ jobs:
 
           push: true
 
-          tags: heinlinzaw/randnumimg:v1.0
+          tags: heinlinzaw/randnumimg:${{ github.ref_name }}
 
 
 
@@ -76,6 +70,6 @@ jobs:
 
           icon_emoji: ":robot_face:"
 
-          text:  "Name: Hein Lin Zaw \nMatriculation: A0249492R \nEmail: <outlook.com|E0941685@U.NUS.EDU> \nRepo: <https://github.com/HeinLinZaw96/randnum.git|git://https://github.com/HeinLinZaw96/randnum.git>\nImage name: heinlinzaw/randnumimg:${{github.ref_name}}\nImage url: <https://hub.docker.com/repository/docker/heinlinzaw/randnumimg|https://hub.docker.com/repository/docker/heinlinzaw/randnumimg>"
+          text:  "Name: Hein Lin Zaw \nMatriculation: A0249492R \nEmail: <outlook.com|E0941685@U.NUS.EDU> \nRepo: ${{github.repositoryUrl}}\nImage name: heinlinzaw/randnumimg:${{github.ref_name}}\nImage url: <https://hub.docker.com/repository/docker/heinlinzaw/randnumimg|https://hub.docker.com/repository/docker/heinlinzaw/randnumimg>"
 
           webhook_url: ${{ secrets.SLACK_WEBHOOK }}
